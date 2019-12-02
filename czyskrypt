@@ -1,0 +1,10 @@
+#!/bin/bash
+
+ZM=$(grep -x -F -c '#!/bin/bash' $1)
+
+echo "$ZM"
+
+if [ "$ZM" -eq 1 ]
+then echo "tak"
+else echo "nie"
+fi
