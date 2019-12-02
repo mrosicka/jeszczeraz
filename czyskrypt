@@ -3,7 +3,7 @@
 ZM=$(grep -x -F -c '#!/bin/bash' $1)
 
 echo "$ZM"
-
+#co ja tu robie?
 if [ "$ZM" -eq 1 ]
 then echo "tak"
 else echo "nie"
