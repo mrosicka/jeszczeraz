@@ -1,0 +1,18 @@
+#!/bin/bash
+
+P=$(pwd)
+CZY=$(echo $PATH | grep "$P")
+
+if [ -n "$CZY" ]
+then echo "Katalog należy do PATH"
+else echo "Katalog nie należy do PATH. Czy chcesz go dodać? (t/n)"
+read odp
+echo $odp
+	if [ "$odp" = "t" ]
+	then
+	PATH=$PATH:$P
+#	echo $PATH
+	echo "dodano"
+	else echo "nie dodano"
+	fi
+fi
