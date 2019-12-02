@@ -1,0 +1,31 @@
+#!/bin/bash
+
+DL=${#1}
+echo "$DL"
+
+OST=${1:$[$DL-2]:$DL}
+echo "$OST"
+
+if [ $OST == ".c" ] && ! [ -f $1 ]
+then
+
+echo "#include<stdio.h>" >> $1
+
+echo "main(){}" >> $1
+
+nano $1
+
+elif [ -f $1 ]
+then
+
+nano $1
+
+else
+
+echo "niewłaściwa nazwa"
+
+fi
+
+
+
+

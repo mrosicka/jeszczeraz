@@ -1,0 +1,11 @@
+#!/bin/bash
+
+if ! [ -f "$1" ]
+then
+echo "#!/bin/bash" > $1
+
+chmod 750 $1
+fi
+
+nano $1
+
